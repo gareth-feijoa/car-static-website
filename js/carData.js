@@ -143,6 +143,73 @@ export const carData = {
             length: '4,470 mm'
         }
     },
+    'hyundai-ioniq-pre-facelift': {
+        title: 'Hyundai Ioniq',
+        subtitle: 'Hybrid Hatchback (Pre-Facelift)',
+        yearRange: '2016 - 2020 (1st Generation)',
+        priceRange: '£12,000 - £18,000 used',
+        image: 'images/hyundai-ioniq-pre-facelift.jpg',
+        ncapRating: 5,
+        trimLevels: [
+            {
+                name: 'SE',
+                features: [
+                    '16-inch alloy wheels',
+                    'Air conditioning',
+                    '7-inch touchscreen',
+                    'Bluetooth connectivity',
+                    'Lane departure warning'
+                ]
+            },
+            {
+                name: 'Premium SE',
+                features: [
+                    '17-inch alloy wheels',
+                    'Climate control',
+                    'Heated front seats',
+                    'Smart cruise control',
+                    'All SE features'
+                ]
+            },
+            {
+                name: 'Premium',
+                features: [
+                    'LED headlights',
+                    'Wireless phone charging',
+                    '8-inch touchscreen',
+                    'Parking sensors',
+                    'All Premium SE features'
+                ]
+            }
+        ],
+        positivePoints: [
+            'Excellent fuel economy (up to 58.5 mpg combined)',
+            'Spacious interior with good headroom',
+            'Comprehensive standard safety features',
+            'Smooth hybrid powertrain',
+            'Good value for money'
+        ],
+        negativePoints: [
+            'Limited boot space due to battery placement',
+            'Basic interior materials',
+            'Limited electric-only range',
+            'Less refined DCT transmission',
+            'Smaller touchscreen than facelift model'
+        ],
+        reliabilityRating: 8.5,
+        garethComments: [
+            'The pre-facelift Ioniq Hybrid is a solid choice for those looking for a reliable and efficient hybrid car. While it may not have the most exciting design or the most premium feel, it delivers where it matters most - fuel efficiency and reliability.',
+            'The hybrid system is smooth and well-integrated, making it a pleasure to drive in both city and motorway conditions. The interior, while not luxurious, is well-built and practical.',
+            'One of the main drawbacks is the boot space, which is compromised by the battery placement. However, this is a common trade-off in hybrid vehicles, and the Ioniq handles it better than many competitors.'
+        ],
+        garethRating: 4.5,
+        practicality: {
+            bootSpace: '443 Litres',
+            rearLegroom: 'Good',
+            fuelTank: '45 Litres',
+            seating: '5 seats'
+        }
+    },
     'kia-niro': {
         title: 'Kia Niro',
         subtitle: 'Hybrid Crossover',
@@ -207,7 +274,7 @@ export const carData = {
         negativePoints: [
             'Modest performance (139 bhp, 0-62 mph in 11.1 seconds)',
             'Less engaging to drive than some rivals',
-            'Firmer ride on \'4\' trim with 18-inch wheels',
+            'Firmer ride on '4' trim with 18-inch wheels',
             'Limited electric-only driving (1-2 miles)',
             'Some cheaper-feeling interior plastics'
         ],
@@ -215,7 +282,7 @@ export const carData = {
         garethComments: [
             'The Kia Niro offers a practical blend of crossover styling with hybrid efficiency, making it an appealing option for those wanting a higher driving position without sacrificing fuel economy. The 2018 models benefit from some subtle updates over the earliest examples, with improved tech interfaces and slightly better refinement.',
             'For a driving pattern focused on weekend use, holidays and primarily motorway/A-road journeys, the Niro has several advantages. Its standard hybrid system maintains good efficiency (50-60 mpg) on longer journeys without needing to be plugged in, unlike plug-in alternatives that lose efficiency once their batteries deplete. The higher driving position and excellent visibility make it comfortable and confidence-inspiring on motorways, while the crossover body style provides more versatility for weekend adventures. Though the 382-litre boot is smaller than some alternatives (like the Octavia\'s 640 litres), it\'s still practical for a couple\'s weekend away or a small family holiday. The smart cruise control on higher trim models is particularly valuable for longer motorway stretches, reducing driver fatigue significantly.',
-            'The \'3\' trim offers the best balance of equipment and value, with leather seats and the improved infotainment system. Worth noting is that models with remaining warranty from this era would still be covered until at least 2025, giving peace of mind for used buyers. The conventional crossover styling also means it doesn\'t scream "hybrid" like the more futuristic Ioniq, which many buyers prefer.'
+            'The '3' trim offers the best balance of equipment and value, with leather seats and the improved infotainment system. Worth noting is that models with remaining warranty from this era would still be covered until at least 2025, giving peace of mind for used buyers. The conventional crossover styling also means it doesn\'t scream "hybrid" like the more futuristic Ioniq, which many buyers prefer.'
         ],
         garethRating: 4,
         practicality: {

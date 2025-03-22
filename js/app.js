@@ -13,6 +13,10 @@ const router = new Router([
         handler: () => showCarDetails('bmw-225xe')
     },
     {
+        path: '/hyundai-ioniq',
+        handler: () => showCarDetails('hyundai-ioniq')
+    },
+    {
         path: '/hyundai-ioniq-facelift',
         handler: () => showCarDetails('hyundai-ioniq-facelift')
     },
