@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skoda Octavia e-TEC MHEV</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #f8f9fa;
+            --text-color: #202124;
+            --light-grey: #dadce0;
+            --success-color: #34a853;
+            --warning-color: #fbbc05;
+            --danger-color: #ea4335;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .car-hero {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        
+        .car-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .car-title {
+            padding: 1rem;
+            background-color: white;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .car-title h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0 1rem;
+        }
+        
+        .car-title p {
+            color: #5f6368;
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+        
+        .year-range {
+            margin-top: 0.3rem;
+            font-weight: 500;
+            color: #5f6368;
+            background-color: #f1f3f4;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+        
+        .price-range {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .ncap-rating {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .stars {
+            margin-left: 0.5rem;
+            color: var(--warning-color);
+            font-size: 1.2rem;
+        }
+        
+        .rating-number {
+            margin-left: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .section {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background-color: white;
+        }
+        
+        .section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .trim-levels {
+            margin-top: 1rem;
+        }
+        
+        .trim-level {
+            padding: 0.75rem;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            margin: 0 0.5rem 0.75rem 0.5rem;
+        }
+        
+        .trim-level h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trim-features {
+            padding-left: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .points-list {
+            list-style-type: none;
+        }
+        
+        .points-list li {
+            padding: 0.5rem 0.5rem 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .points-list li:not(:last-child) {
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .plus-point:before {
+            content: "✓";
+            color: var(--success-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .negative-point:before {
+            content: "✗";
+            color: var(--danger-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .reliability-rating {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .rating-bar {
+            height: 12px;
+            width: 75%;
+            background-color: var(--light-grey);
+            border-radius: 6px;
+            margin-left: 1rem;
+            overflow: hidden;
+        }
+        
+        .rating-fill {
+            height: 100%;
+            background-color: var(--success-color);
+            border-radius: 6px;
+        }
+        
+        .gareth-comments p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .gareth-rating {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .gareth-rating h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .rating-display {
+            display: flex;
+            align-items: center;
+        }
+        
+        .rating-stars {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+        
+        .empty-star {
+            color: var(--light-grey);
+        }
+        
+        .rating-text {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .practicality-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            padding: 0 0.5rem;
+        }
+        
+        .practicality-item {
+            padding: 0.5rem;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .practicality-item h3 {
+            font-size: 0.8rem;
+            color: #5f6368;
+            margin-bottom: 0.25rem;
+        }
+        
+        .practicality-item p {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            padding: 1rem;
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                margin: 0 auto;
+                padding: 0;
+            }
+            
+            .car-title h1 {
+                font-size: 2rem;
+                padding: 0;
+            }
+            
+            .car-title p {
+                padding: 0;
+            }
+            
+            .price-range {
+                font-size: 1.2rem;
+            }
+            
+            .trim-level {
+                margin: 0 0 0.75rem 0;
+            }
+            
+            .trim-features {
+                padding-left: 1.5rem;
+            }
+            
+            .points-list li {
+                padding: 0.5rem 0;
+            }
+            
+            .practicality-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+                padding: 0;
+            }
+            
+            .practicality-item {
+                padding: 0.75rem;
+            }
+            
+            .practicality-item h3 {
+                font-size: 0.9rem;
+            }
+            
+            .practicality-item p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Car Details</h1>
+            <div id="carSelectorContainer"></div>
+        </header>
+        
+        <div class="car-hero">
+            <img src="../images/Skoda-Octavia-MHEV.jpg" alt="Škoda Octavia">
+        </div>
+        
+        <div class="car-title">
+            <h1>Skoda Octavia</h1>
+            <p>e-TEC Mild Hybrid Estate</p>
+            <p class="year-range">2020 - Present (4th Generation)</p>
+        </div>
+        
+        <div class="price-range">
+            £10,500 - £13,000 used
+        </div>
+        
+        <div class="ncap-rating">
+            <span>Euro NCAP Rating:</span>
+            <div class="stars">★★★★★</div>
+            <span class="rating-number">5/5</span>
+        </div>
+        
+        <div class="section">
+            <h2>Trim Levels</h2>
+            <div class="trim-levels">
+                <div class="trim-level">
+                    <h3>SE First Edition</h3>
+                    <ul class="trim-features">
+                        <li>16-inch alloy wheels</li>
+                        <li>8.25-inch touchscreen</li>
+                        <li>SmartLink smartphone connectivity</li>
+                        <li>Dual-zone climate control</li>
+                        <li>Cruise control</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>SE Technology</h3>
+                    <ul class="trim-features">
+                        <li>10-inch touchscreen navigation</li>
+                        <li>Voice control</li>
+                        <li>Front and rear parking sensors</li>
+                        <li>Driving mode selection</li>
+                        <li>Chrome window surrounds</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>SE L</h3>
+                    <ul class="trim-features">
+                        <li>17-inch alloy wheels</li>
+                        <li>Microsuede upholstery</li>
+                        <li>Heated front seats</li>
+                        <li>Rear privacy glass</li>
+                        <li>Keyless entry and start</li>
+                        <li>Adaptive cruise control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Positive Points</h2>
+            <ul class="points-list">
+                <li class="plus-point">Exceptional boot space (640 litres)</li>
+                <li class="plus-point">Excellent motorway comfort and stability</li>
+                <li class="plus-point">Well-designed interior with quality materials</li>
+                <li class="plus-point">Mild hybrid system improves stop-start functionality</li>
+                <li class="plus-point">Spacious rear seats with ample legroom</li>
+                <li class="plus-point">Good fuel economy (50-55 mpg)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Negative Points</h2>
+            <ul class="points-list">
+                <li class="negative-point">1.0-litre engine can feel underpowered (110 bhp)</li>
+                <li class="negative-point">Mild hybrid benefits are modest compared to full hybrids</li>
+                <li class="negative-point">DSG transmission can be hesitant at low speeds</li>
+                <li class="negative-point">Touch-sensitive controls can be distracting while driving</li>
+                <li class="negative-point">Used examples often have high mileage (ex-fleet)</li>
+            </ul>
+        </div>
+        
+        <div class="reliability-rating">
+            <span>Reliability Rating:</span>
+            <div class="rating-bar">
+                <div class="rating-fill" style="width: 83%;"></div>
+            </div>
+            <span class="rating-number">8.3/10</span>
+        </div>
+        
+        <div class="section">
+            <h2>Gareth's Comments</h2>
+            <div class="gareth-comments">
+                <p>The Skoda Octavia e-TEC offers exceptional practicality combined with modern efficiency. The mild hybrid system doesn't provide electric-only driving but does improve efficiency and smoothness, particularly in stop-start traffic.</p>
+                <p>For a driving pattern focused on weekend use, holidays and primarily motorway/A-road journeys, the Octavia e-TEC is remarkably well-suited. Its class-leading 640-litre boot (expanding to a massive 1,700 litres with seats folded) is perfect for family holidays, easily accommodating luggage for extended trips. On motorways, the Octavia is in its element with a composed, stable ride and excellent sound insulation making long journeys relaxing. The mild hybrid system helps maintain good fuel economy of 50-55 mpg even at steady motorway speeds, and unlike plug-in hybrids, it doesn't need charging to deliver its efficiency benefits. The adaptive cruise control and comfortable seats reduce fatigue on longer drives, while the spacious rear seats ensure passengers remain comfortable too.</p>
+                <p>The SE L trim provides the best balance of equipment and value, with heated seats and keyless entry adding genuine convenience. The 1.0-litre engine is adequate for most scenarios but can feel stretched on steeper inclines when fully loaded. If you prioritize space and comfort for occasional longer journeys, the Octavia represents excellent value, though be wary of high-mileage ex-fleet examples that dominate the used market.</p>
+                <div class="gareth-rating">
+                    <h3>Gareth's Rating</h3>
+                    <div class="rating-display">
+                        <div class="rating-stars">★★★★<span class="empty-star">☆</span></div>
+                        <span class="rating-text">4/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Practicality</h2>
+            <div class="practicality-grid">
+                <div class="practicality-item">
+                    <h3>Boot Space</h3>
+                    <p>640 Litres</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Rear Legroom</h3>
+                    <p>Excellent</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Seats Folded</h3>
+                    <p>1,700 Litres</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>ISOFIX Points</h3>
+                    <p>2 Rear</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Fuel Economy</h3>
+                    <p>50-55 mpg</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Motorway Efficiency</h3>
+                    <p>50-55 mpg</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Length</h3>
+                    <p>4,689 mm</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Car information compiled March 2025. Prices and specifications subject to change.</p>
+        </footer>
+    </div>
+
+    <script>
+        fetch('../html%20pages/car-selector.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('carSelectorContainer').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

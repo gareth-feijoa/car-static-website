@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skoda Octavia (3rd Gen Facelift)</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #f8f9fa;
+            --text-color: #202124;
+            --light-grey: #dadce0;
+            --success-color: #34a853;
+            --warning-color: #fbbc05;
+            --danger-color: #ea4335;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .car-hero {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        
+        .car-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .car-title {
+            padding: 1rem;
+            background-color: white;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .car-title h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0 1rem;
+        }
+        
+        .car-title p {
+            color: #5f6368;
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+        
+        .year-range {
+            margin-top: 0.3rem;
+            font-weight: 500;
+            color: #5f6368;
+            background-color: #f1f3f4;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+        
+        .price-range {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .ncap-rating {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .stars {
+            margin-left: 0.5rem;
+            color: var(--warning-color);
+            font-size: 1.2rem;
+        }
+        
+        .rating-number {
+            margin-left: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .section {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background-color: white;
+        }
+        
+        .section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .trim-levels {
+            margin-top: 1rem;
+        }
+        
+        .trim-level {
+            padding: 0.75rem;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            margin: 0 0.5rem 0.75rem 0.5rem;
+        }
+        
+        .trim-level h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trim-features {
+            padding-left: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .points-list {
+            list-style-type: none;
+        }
+        
+        .points-list li {
+            padding: 0.5rem 0.5rem 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .points-list li:not(:last-child) {
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .plus-point:before {
+            content: "✓";
+            color: var(--success-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .negative-point:before {
+            content: "✗";
+            color: var(--danger-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .reliability-rating {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .rating-bar {
+            height: 12px;
+            width: 75%;
+            background-color: var(--light-grey);
+            border-radius: 6px;
+            margin-left: 1rem;
+            overflow: hidden;
+        }
+        
+        .rating-fill {
+            height: 100%;
+            background-color: var(--success-color);
+            border-radius: 6px;
+        }
+        
+        .gareth-comments p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .gareth-rating {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .gareth-rating h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .rating-display {
+            display: flex;
+            align-items: center;
+        }
+        
+        .rating-stars {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+        
+        .empty-star {
+            color: var(--light-grey);
+        }
+        
+        .rating-text {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .practicality-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            padding: 0 0.5rem;
+        }
+        
+        .practicality-item {
+            padding: 0.5rem;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .practicality-item h3 {
+            font-size: 0.8rem;
+            color: #5f6368;
+            margin-bottom: 0.25rem;
+        }
+        
+        .practicality-item p {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            padding: 1rem;
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                margin: 0 auto;
+                padding: 0;
+            }
+            
+            .car-title h1 {
+                font-size: 2rem;
+                padding: 0;
+            }
+            
+            .car-title p {
+                padding: 0;
+            }
+            
+            .price-range {
+                font-size: 1.2rem;
+            }
+            
+            .trim-level {
+                margin: 0 0 0.75rem 0;
+            }
+            
+            .trim-features {
+                padding-left: 1.5rem;
+            }
+            
+            .points-list li {
+                padding: 0.5rem 0;
+            }
+            
+            .practicality-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+                padding: 0;
+            }
+            
+            .practicality-item {
+                padding: 0.75rem;
+            }
+            
+            .practicality-item h3 {
+                font-size: 0.9rem;
+            }
+            
+            .practicality-item p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Car Details</h1>
+            <div id="carSelectorContainer"></div>
+        </header>
+        
+        <div class="car-hero">
+            <img src="../images/Skoda-Octavia-2017.jpg" alt="Škoda Octavia 3rd Generation">
+        </div>
+        
+        <div class="car-title">
+            <h1>Skoda Octavia</h1>
+            <p>Estate/Hatchback</p>
+            <p class="year-range">2017 - 2020 (3rd Generation Facelift)</p>
+        </div>
+        
+        <div class="price-range">
+            £8,000 - £15,000 used
+        </div>
+        
+        <div class="ncap-rating">
+            <span>Euro NCAP Rating:</span>
+            <div class="stars">★★★★★</div>
+            <span class="rating-number">5/5</span>
+        </div>
+        
+        <div class="section">
+            <h2>Trim Levels</h2>
+            <div class="trim-levels">
+                <div class="trim-level">
+                    <h3>S (Base Trim)</h3>
+                    <ul class="trim-features">
+                        <li>16-inch alloy wheels</li>
+                        <li>8-inch touchscreen infotainment</li>
+                        <li>DAB radio</li>
+                        <li>Bluetooth connectivity</li>
+                        <li>Air conditioning</li>
+                        <li>Electric front windows</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>SE</h3>
+                    <ul class="trim-features">
+                        <li>Dual-zone climate control</li>
+                        <li>Rear parking sensors</li>
+                        <li>Cruise control</li>
+                        <li>Driver fatigue sensor</li>
+                        <li>Auto-dimming rear-view mirror</li>
+                        <li>Umbrella under passenger seat</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>SE L</h3>
+                    <ul class="trim-features">
+                        <li>17-inch alloy wheels</li>
+                        <li>Alcantara/leather upholstery</li>
+                        <li>Full LED headlights</li>
+                        <li>Privacy glass</li>
+                        <li>Satellite navigation</li>
+                        <li>Front parking sensors</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>Laurin & Klement (Top Trim)</h3>
+                    <ul class="trim-features">
+                        <li>18-inch alloy wheels</li>
+                        <li>Full leather upholstery</li>
+                        <li>Heated front seats</li>
+                        <li>Canton sound system</li>
+                        <li>Adaptive cruise control</li>
+                        <li>Electrically adjustable driver's seat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Engine Options</h2>
+            <div class="trim-levels">
+                <div class="trim-level">
+                    <h3>Petrol</h3>
+                    <ul class="trim-features">
+                        <li>1.0 TSI 115PS</li>
+                        <li>1.4 TSI 150PS</li>
+                        <li>1.5 TSI 150PS (later models)</li>
+                        <li>2.0 TSI 190PS (rare)</li>
+                        <li>2.0 TSI 230PS (vRS)</li>
+                        <li>2.0 TSI 245PS (vRS)</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>Diesel</h3>
+                    <ul class="trim-features">
+                        <li>1.6 TDI 115PS</li>
+                        <li>2.0 TDI 150PS</li>
+                        <li>2.0 TDI 184PS</li>
+                        <li>2.0 TDI 184PS (vRS)</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>Transmission</h3>
+                    <ul class="trim-features">
+                        <li>5-speed manual (1.0 TSI)</li>
+                        <li>6-speed manual</li>
+                        <li>7-speed DSG automatic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Positive Points</h2>
+            <ul class="points-list">
+                <li class="plus-point">Exceptional boot space (590 litres hatch/610 litres estate)</li>
+                <li class="plus-point">Excellent value for money</li>
+                <li class="plus-point">Comfortable and refined ride quality</li>
+                <li class="plus-point">High build quality and durability</li>
+                <li class="plus-point">Wide engine range to suit various needs</li>
+                <li class="plus-point">Practical touches like umbrellas and ticket holders</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Negative Points</h2>
+            <ul class="points-list">
+                <li class="negative-point">Conservative styling may be too understated for some</li>
+                <li class="negative-point">Not as engaging to drive as some rivals</li>
+                <li class="negative-point">Some early DSG gearbox reliability issues</li>
+                <li class="negative-point">Basic interior plastics in lower trim levels</li>
+                <li class="negative-point">1.6 TDI engine can feel underpowered</li>
+            </ul>
+        </div>
+        
+        <div class="reliability-rating">
+            <span>Reliability Rating:</span>
+            <div class="rating-bar">
+                <div class="rating-fill" style="width: 88%;"></div>
+            </div>
+            <span class="rating-number">8.8/10</span>
+        </div>
+        
+        <div class="section">
+            <h2>Gareth's Comments</h2>
+            <div class="gareth-comments">
+                <p>The facelifted third-generation Skoda Octavia represents one of the best all-around family car packages on the used market. Its combination of space, comfort, and value is hard to beat, while the controversial split headlight design of the facelift gives it a more distinctive appearance than the pre-facelift model.</p>
+                <p>For a driving pattern focused on weekend use, holidays and primarily motorway/A-road journeys, the Octavia is absolutely in its element. The 2.0 TDI 150PS engine offers the perfect balance of power and economy for this usage, delivering around 55-60 mpg on motorway runs while providing enough torque for effortless overtaking and hill climbing. The estate version's enormous 610-litre boot expands to a van-like 1,740 litres with seats folded, making it perfect for family holidays and weekend activities. On long motorway journeys, the Octavia's comfortable ride, excellent sound insulation (especially in SE L and above), and supportive seats really come into their own, reducing fatigue significantly. The adaptive cruise control on higher trim models is particularly valuable for longer trips.</p>
+                <p>The SE L trim hits the sweet spot in the range, offering the best balance of equipment and value with features like satellite navigation, Alcantara upholstery, and full LED headlights that are particularly useful for country A-roads at night. If your budget allows, the 7-speed DSG automatic makes motorway driving even more relaxed, though the manual gearboxes are also excellent with a precise, easy shift action.</p>
+                <div class="gareth-rating">
+                    <h3>Gareth's Rating</h3>
+                    <div class="rating-display">
+                        <div class="rating-stars">★★★★★</div>
+                        <span class="rating-text">5/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Practicality</h2>
+            <div class="practicality-grid">
+                <div class="practicality-item">
+                    <h3>Boot Space (Hatch)</h3>
+                    <p>590 Litres</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Boot Space (Estate)</h3>
+                    <p>610 Litres</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Seats Folded (Estate)</h3>
+                    <p>1,740 Litres</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Fuel Economy (2.0 TDI)</h3>
+                    <p>55-60 mpg</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Fuel Economy (1.5 TSI)</h3>
+                    <p>45-50 mpg</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Motorway Efficiency</h3>
+                    <p>50-60 mpg (diesel)</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Towing Capacity</h3>
+                    <p>Up to 2,000 kg</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Car information compiled March 2025. Prices and specifications subject to change.</p>
+        </footer>
+    </div>
+
+    <script>
+        fetch('car-selector.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('carSelectorContainer').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

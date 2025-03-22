@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VW Passat GTE Estate</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #f8f9fa;
+            --text-color: #202124;
+            --light-grey: #dadce0;
+            --success-color: #34a853;
+            --warning-color: #fbbc05;
+            --danger-color: #ea4335;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .car-hero {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        
+        .car-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .car-title {
+            padding: 1rem;
+            background-color: white;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .car-title h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0 1rem;
+        }
+        
+        .car-title p {
+            color: #5f6368;
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+        
+        .year-range {
+            margin-top: 0.3rem;
+            font-weight: 500;
+            color: #5f6368;
+            background-color: #f1f3f4;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+        
+        .price-range {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .ncap-rating {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .stars {
+            margin-left: 0.5rem;
+            color: var(--warning-color);
+            font-size: 1.2rem;
+        }
+        
+        .rating-number {
+            margin-left: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .section {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background-color: white;
+        }
+        
+        .section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .trim-levels {
+            margin-top: 1rem;
+        }
+        
+        .trim-level {
+            padding: 0.75rem;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            margin: 0 0.5rem 0.75rem 0.5rem;
+        }
+        
+        .trim-level h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trim-features {
+            padding-left: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .points-list {
+            list-style-type: none;
+        }
+        
+        .points-list li {
+            padding: 0.5rem 0.5rem 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .points-list li:not(:last-child) {
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .plus-point:before {
+            content: "✓";
+            color: var(--success-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .negative-point:before {
+            content: "✗";
+            color: var(--danger-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .reliability-rating {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .rating-bar {
+            height: 12px;
+            width: 75%;
+            background-color: var(--light-grey);
+            border-radius: 6px;
+            margin-left: 1rem;
+            overflow: hidden;
+        }
+        
+        .rating-fill {
+            height: 100%;
+            background-color: var(--success-color);
+            border-radius: 6px;
+        }
+        
+        .gareth-comments p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .gareth-rating {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .gareth-rating h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .rating-display {
+            display: flex;
+            align-items: center;
+        }
+        
+        .rating-stars {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+        
+        .empty-star {
+            color: var(--light-grey);
+        }
+        
+        .rating-text {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .practicality-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            padding: 0 0.5rem;
+        }
+        
+        .practicality-item {
+            padding: 0.5rem;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .practicality-item h3 {
+            font-size: 0.8rem;
+            color: #5f6368;
+            margin-bottom: 0.25rem;
+        }
+        
+        .practicality-item p {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            padding: 1rem;
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                margin: 0 auto;
+                padding: 0;
+            }
+            
+            .car-title h1 {
+                font-size: 2rem;
+                padding: 0;
+            }
+            
+            .car-title p {
+                padding: 0;
+            }
+            
+            .price-range {
+                font-size: 1.2rem;
+            }
+            
+            .trim-level {
+                margin: 0 0 0.75rem 0;
+            }
+            
+            .trim-features {
+                padding-left: 1.5rem;
+            }
+            
+            .points-list li {
+                padding: 0.5rem 0;
+            }
+            
+            .practicality-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+                padding: 0;
+            }
+            
+            .practicality-item {
+                padding: 0.75rem;
+            }
+            
+            .practicality-item h3 {
+                font-size: 0.9rem;
+            }
+            
+            .practicality-item p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Car Details</h1>
+            <div id="carSelectorContainer"></div>
+        </header>
+        
+        <div class="car-hero">
+            <img src="../images/VW-Passat-GTE.jpg" alt="VW Passat GTE">
+        </div>
+        
+        <div class="car-title">
+            <h1>Volkswagen Passat GTE</h1>
+            <p>Estate Plug-in Hybrid</p>
+            <p class="year-range">2016 - 2020 (B8 Generation)</p>
+        </div>
+        
+        <div class="price-range">
+            £9,000 - £12,000 used
+        </div>
+        
+        <div class="ncap-rating">
+            <span>Euro NCAP Rating:</span>
+            <div class="stars">★★★★★</div>
+            <span class="rating-number">5/5</span>
+        </div>
+        
+        <div class="section">
+            <h2>Trim Levels</h2>
+            <div class="trim-levels">
+                <div class="trim-level">
+                    <h3>GTE (Standard Trim)</h3>
+                    <ul class="trim-features">
+                        <li>18-inch alloy wheels</li>
+                        <li>LED headlights</li>
+                        <li>8-inch infotainment system</li>
+                        <li>Heated front seats</li>
+                        <li>Adaptive cruise control</li>
+                        <li>Blue GTE styling accents</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>GTE Advance</h3>
+                    <ul class="trim-features">
+                        <li>Active Info Display digital instruments</li>
+                        <li>9.2-inch Discover Pro navigation</li>
+                        <li>Voice control</li>
+                        <li>Keyless entry and start</li>
+                        <li>Panoramic sunroof</li>
+                        <li>LED premium headlights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Positive Points</h2>
+            <ul class="points-list">
+                <li class="plus-point">Enormous boot space (483 litres, 1,613 with seats folded)</li>
+                <li class="plus-point">Premium interior quality with excellent fit and finish</li>
+                <li class="plus-point">Supremely comfortable on long journeys</li>
+                <li class="plus-point">Good electric range (31 miles when new)</li>
+                <li class="plus-point">Powerful combined output (218 bhp)</li>
+                <li class="plus-point">£0 road tax (for models registered before April 2017)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Negative Points</h2>
+            <ul class="points-list">
+                <li class="negative-point">Poor fuel economy once battery depleted (40-45 mpg)</li>
+                <li class="negative-point">DSG gearbox issues on early models</li>
+                <li class="negative-point">High maintenance costs for complex systems</li>
+                <li class="negative-point">Heavier than standard Passat affecting handling</li>
+                <li class="negative-point">Higher insurance groups than non-hybrid models</li>
+            </ul>
+        </div>
+        
+        <div class="reliability-rating">
+            <span>Reliability Rating:</span>
+            <div class="rating-bar">
+                <div class="rating-fill" style="width: 78%;"></div>
+            </div>
+            <span class="rating-number">7.8/10</span>
+        </div>
+        
+        <div class="section">
+            <h2>Gareth's Comments</h2>
+            <div class="gareth-comments">
+                <p>The Volkswagen Passat GTE Estate excels as a comfortable cruiser with incredible practicality. The vast boot space and refined ride quality make it a compelling option for those who value space and refinement.</p>
+                <p>For a driving pattern focused on weekend use, holidays and primarily motorway/A-road journeys, the Passat GTE has both strengths and weaknesses. Its supreme long-distance comfort makes motorway journeys a pleasure, with supportive seats, excellent sound insulation, and adaptive cruise control. The enormous 483-litre boot (expanding to 1,613 litres with seats folded) is perfect for family holidays, easily swallowing luggage, sports equipment or whatever else you might need for a weekend away. However, like other plug-in hybrids, its efficiency is compromised on longer journeys once the battery depletes, with motorway economy dropping to around 40-45 mpg. Without regular charging, you're carrying around the extra weight of the battery system with diminishing returns on fuel economy.</p>
+                <p>For those prioritizing space and comfort over ultimate efficiency on longer journeys, the Passat GTE represents good value in the used market. The DSG transmission can be problematic on some early models, so a comprehensive pre-purchase inspection is essential. The GTE Advance trim offers a genuinely premium experience with its digital instruments and larger infotainment system, making it worth seeking out if budget allows.</p>
+                <div class="gareth-rating">
+                    <h3>Gareth's Rating</h3>
+                    <div class="rating-display">
+                        <div class="rating-stars">★★★★<span class="empty-star">☆</span></div>
+                        <span class="rating-text">4/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Practicality</h2>
+            <div class="practicality-grid">
+                <div class="practicality-item">
+                    <h3>Boot Space</h3>
+                    <p>483 Litres</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Rear Legroom</h3>
+                    <p>Excellent</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Seats Folded</h3>
+                    <p>1,613 Litres</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>ISOFIX Points</h3>
+                    <p>3 (incl. front)</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Fuel Economy</h3>
+                    <p>40-45 mpg</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Electric Range</h3>
+                    <p>31 miles (new)</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Motorway Efficiency</h3>
+                    <p>40-45 mpg</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Car information compiled March 2025. Prices and specifications subject to change.</p>
+        </footer>
+    </div>
+
+    <script>
+        fetch('../html%20pages/car-selector.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('carSelectorContainer').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

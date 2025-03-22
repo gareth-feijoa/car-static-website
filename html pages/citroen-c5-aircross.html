@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citroen C5 Aircross BlueHDI</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #f8f9fa;
+            --text-color: #202124;
+            --light-grey: #dadce0;
+            --success-color: #34a853;
+            --warning-color: #fbbc05;
+            --danger-color: #ea4335;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .car-hero {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        
+        .car-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .car-title {
+            padding: 1rem;
+            background-color: white;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .car-title h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0 1rem;
+        }
+        
+        .car-title p {
+            color: #5f6368;
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+        
+        .year-range {
+            margin-top: 0.3rem;
+            font-weight: 500;
+            color: #5f6368;
+            background-color: #f1f3f4;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+        
+        .price-range {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .ncap-rating {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .stars {
+            margin-left: 0.5rem;
+            color: var(--warning-color);
+            font-size: 1.2rem;
+        }
+        
+        .rating-number {
+            margin-left: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .section {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background-color: white;
+        }
+        
+        .section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .trim-levels {
+            margin-top: 1rem;
+        }
+        
+        .trim-level {
+            padding: 0.75rem;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            margin: 0 0.5rem 0.75rem 0.5rem;
+        }
+        
+        .trim-level h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trim-features {
+            padding-left: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .points-list {
+            list-style-type: none;
+        }
+        
+        .points-list li {
+            padding: 0.5rem 0.5rem 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .points-list li:not(:last-child) {
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .plus-point:before {
+            content: "✓";
+            color: var(--success-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .negative-point:before {
+            content: "✗";
+            color: var(--danger-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .reliability-rating {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .rating-bar {
+            height: 12px;
+            width: 75%;
+            background-color: var(--light-grey);
+            border-radius: 6px;
+            margin-left: 1rem;
+            overflow: hidden;
+        }
+        
+        .rating-fill {
+            height: 100%;
+            background-color: var(--success-color);
+            border-radius: 6px;
+        }
+        
+        .gareth-comments p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .gareth-rating {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .gareth-rating h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .rating-display {
+            display: flex;
+            align-items: center;
+        }
+        
+        .rating-stars {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+        
+        .empty-star {
+            color: var(--light-grey);
+        }
+        
+        .rating-text {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .practicality-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            padding: 0 0.5rem;
+        }
+        
+        .practicality-item {
+            padding: 0.5rem;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .practicality-item h3 {
+            font-size: 0.8rem;
+            color: #5f6368;
+            margin-bottom: 0.25rem;
+        }
+        
+        .practicality-item p {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            padding: 1rem;
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                margin: 0 auto;
+                padding: 0;
+            }
+            
+            .car-title h1 {
+                font-size: 2rem;
+                padding: 0;
+            }
+            
+            .car-title p {
+                padding: 0;
+            }
+            
+            .price-range {
+                font-size: 1.2rem;
+            }
+            
+            .trim-level {
+                margin: 0 0 0.75rem 0;
+            }
+            
+            .trim-features {
+                padding-left: 1.5rem;
+            }
+            
+            .points-list li {
+                padding: 0.5rem 0;
+            }
+            
+            .practicality-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+                padding: 0;
+            }
+            
+            .practicality-item {
+                padding: 0.75rem;
+            }
+            
+            .practicality-item h3 {
+                font-size: 0.9rem;
+            }
+            
+            .practicality-item p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Car Details</h1>
+            <div id="carSelectorContainer"></div>
+        </header>
+        
+        <div class="car-hero">
+            <img src="../images/Citroen-C5-Aircross.jpg" alt="Citroën C5 Aircross">
+        </div>
+        
+        <div class="car-title">
+            <h1>Citroen C5 Aircross</h1>
+            <p>BlueHDI SUV</p>
+            <p class="year-range">2018 - Present (1st Generation)</p>
+        </div>
+        
+        <div class="price-range">
+            £12,000 - £25,000 used
+        </div>
+        
+        <div class="ncap-rating">
+            <span>Euro NCAP Rating:</span>
+            <div class="stars">★★★★<span class="empty-star">☆</span></div>
+            <span class="rating-number">4/5</span>
+        </div>
+        
+        <div class="section">
+            <h2>Trim Levels</h2>
+            <div class="trim-levels">
+                <div class="trim-level">
+                    <h3>Feel</h3>
+                    <ul class="trim-features">
+                        <li>17-inch alloy wheels</li>
+                        <li>8-inch touchscreen</li>
+                        <li>Apple CarPlay and Android Auto</li>
+                        <li>Rear parking sensors</li>
+                        <li>Dual zone climate control</li>
+                        <li>Advanced Comfort seats</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>Flair</h3>
+                    <ul class="trim-features">
+                        <li>18-inch alloy wheels</li>
+                        <li>ConnectedCAM dash cam</li>
+                        <li>Front parking sensors</li>
+                        <li>Reversing camera</li>
+                        <li>Blind spot monitoring</li>
+                        <li>Privacy glass</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>Flair Plus (Later models)</h3>
+                    <ul class="trim-features">
+                        <li>19-inch alloy wheels</li>
+                        <li>Panoramic opening glass roof</li>
+                        <li>Highway Driver Assist</li>
+                        <li>Wireless phone charging</li>
+                        <li>Powered tailgate</li>
+                        <li>Premium sound system</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>Shine (Later models)</h3>
+                    <ul class="trim-features">
+                        <li>18-inch alloy wheels</li>
+                        <li>Half leather seats</li>
+                        <li>Front and rear parking sensors</li>
+                        <li>Active Safety Brake</li>
+                        <li>Head-up display</li>
+                        <li>Satellite navigation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Engine Options</h2>
+            <div class="trim-levels">
+                <div class="trim-level">
+                    <h3>Diesel</h3>
+                    <ul class="trim-features">
+                        <li>1.5 BlueHDI 130bhp</li>
+                        <li>2.0 BlueHDI 180bhp</li>
+                    </ul>
+                </div>
+                
+                <div class="trim-level">
+                    <h3>Transmission</h3>
+                    <ul class="trim-features">
+                        <li>6-speed manual</li>
+                        <li>8-speed automatic (EAT8)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Positive Points</h2>
+            <ul class="points-list">
+                <li class="plus-point">Exceptionally comfortable suspension with Progressive Hydraulic Cushions</li>
+                <li class="plus-point">Very spacious interior with sliding rear seats</li>
+                <li class="plus-point">Excellent fuel economy, especially the 1.5 BlueHDI</li>
+                <li class="plus-point">Distinctive styling stands out from rivals</li>
+                <li class="plus-point">Well-equipped at all trim levels</li>
+                <li class="plus-point">Advanced Comfort seats provide long-journey comfort</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Negative Points</h2>
+            <ul class="points-list">
+                <li class="negative-point">Touchscreen controls can be fiddly</li>
+                <li class="negative-point">Not as engaging to drive as some rivals</li>
+                <li class="negative-point">Some interior materials feel less premium</li>
+                <li class="negative-point">Automatic gearbox can be hesitant</li>
+                <li class="negative-point">Infotainment system can be slow to respond</li>
+            </ul>
+        </div>
+        
+        <div class="reliability-rating">
+            <span>Reliability Rating:</span>
+            <div class="rating-bar">
+                <div class="rating-fill" style="width: 78%;"></div>
+            </div>
+            <span class="rating-number">7.8/10</span>
+        </div>
+        
+        <div class="section">
+            <h2>Gareth's Comments</h2>
+            <div class="gareth-comments">
+                <p>The Citroen C5 Aircross represents a distinctly French approach to the family SUV, prioritizing comfort over sportiness. Its Progressive Hydraulic Cushion suspension is genuinely impressive, filtering out road imperfections that would unsettle many rivals. Combined with the Advanced Comfort seats, it provides one of the most relaxing driving experiences in its class.</p>
+                <p>For a driving pattern focused on weekend use, holidays and primarily motorway/A-road journeys, the C5 Aircross BlueHDI is extremely well-suited. The 1.5 BlueHDI engine delivers impressive real-world motorway economy of 48-52 mpg, while the 2.0 BlueHDI offers more power for those who regularly carry heavier loads or tow, with economy in the 45-48 mpg range. On long motorway stretches, the comfort-focused suspension and supportive seats really come into their own, reducing fatigue significantly. The sliding and reclining rear seats provide excellent flexibility for passengers or cargo on weekend trips and holidays.</p>
+                <p>The Flair trim offers the best balance of equipment and value with its additional safety features and reversing camera proving particularly useful for a vehicle of this size. While the C5 Aircross isn't the most engaging driver's car, its focus on comfort makes it ideal for those who prioritize a relaxed journey over cornering dynamics. For motorway cruising and longer A-road trips, it's one of the most comfortable options in its class, particularly with the 1.5 BlueHDI engine which provides adequate performance with excellent efficiency.</p>
+                <div class="gareth-rating">
+                    <h3>Gareth's Rating</h3>
+                    <div class="rating-display">
+                        <div class="rating-stars">★★★★<span class="empty-star">☆</span></div>
+                        <span class="rating-text">4/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Practicality</h2>
+            <div class="practicality-grid">
+                <div class="practicality-item">
+                    <h3>Boot Space</h3>
+                    <p>580 Litres</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Seats Folded</h3>
+                    <p>1,630 Litres</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Fuel Economy</h3>
+                    <p>50-60 mpg (1.5)</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Motorway Efficiency</h3>
+                    <p>48-52 mpg (1.5)</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Motorway Efficiency</h3>
+                    <p>45-48 mpg (2.0)</p>
+                </div>
+                
+                <div class="practicality-item">
+                    <h3>Towing Capacity</h3>
+                    <p>Up to 1,650 kg</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Car information compiled March 2025. Prices and specifications subject to change.</p>
+        </footer>
+    </div>
+
+    <script>
+        fetch('../html pages/car-selector.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('carSelectorContainer').innerHTML = html;
+            });
+    </script>
+</body>
+</html>
