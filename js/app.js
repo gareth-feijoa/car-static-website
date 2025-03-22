@@ -64,13 +64,17 @@ function initializeCarSelector() {
         const option = document.createElement('option');
         option.value = id;
         
-        // Add more descriptive text for Skoda Octavia models
+        // Add more descriptive text for specific models
         if (id === 'skoda-octavia-2017') {
             option.textContent = 'Skoda Octavia Estate (2017-2020)';
         } else if (id === 'skoda-octavia-2020') {
             option.textContent = 'Skoda Octavia Estate (2020-Present)';
         } else if (id === 'skoda-octavia-mhev') {
             option.textContent = 'Skoda Octavia Estate MHEV (2020-Present)';
+        } else if (id === 'hyundai-ioniq') {
+            option.textContent = 'Hyundai Ioniq Hybrid (2016-2020)';
+        } else if (id === 'hyundai-ioniq-facelift') {
+            option.textContent = 'Hyundai Ioniq Hybrid (2020-2022)';
         } else {
             option.textContent = car.title;
         }

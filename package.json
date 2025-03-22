@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A responsive, modern website template built with HTML5, CSS3, and JavaScript. This template features a clean design, smooth animations, and mobile-first approach.",
   "scripts": {
-    "start": "serve ."
+    "start": "serve . -s --config serve.json"
   },
   "keywords": [],
   "author": "",

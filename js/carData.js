@@ -143,12 +143,12 @@ export const carData = {
             length: '4,470 mm'
         }
     },
-    'hyundai-ioniq-pre-facelift': {
+    'hyundai-ioniq': {
         title: 'Hyundai Ioniq',
         subtitle: 'Hybrid Hatchback (Pre-Facelift)',
         yearRange: '2016 - 2020 (1st Generation)',
         priceRange: '£12,000 - £18,000 used',
-        image: 'images/hyundai-ioniq-pre-facelift.jpg',
+        image: 'images/Hyundai-Ioniq-Hybrid.jpg',
         ncapRating: 5,
         trimLevels: [
             {
@@ -274,7 +274,7 @@ export const carData = {
         negativePoints: [
             'Modest performance (139 bhp, 0-62 mph in 11.1 seconds)',
             'Less engaging to drive than some rivals',
-            'Firmer ride on '4' trim with 18-inch wheels',
+            'Firmer ride on "4" trim with 18-inch wheels',
             'Limited electric-only driving (1-2 miles)',
             'Some cheaper-feeling interior plastics'
         ],
@@ -282,7 +282,7 @@ export const carData = {
         garethComments: [
             'The Kia Niro offers a practical blend of crossover styling with hybrid efficiency, making it an appealing option for those wanting a higher driving position without sacrificing fuel economy. The 2018 models benefit from some subtle updates over the earliest examples, with improved tech interfaces and slightly better refinement.',
             'For a driving pattern focused on weekend use, holidays and primarily motorway/A-road journeys, the Niro has several advantages. Its standard hybrid system maintains good efficiency (50-60 mpg) on longer journeys without needing to be plugged in, unlike plug-in alternatives that lose efficiency once their batteries deplete. The higher driving position and excellent visibility make it comfortable and confidence-inspiring on motorways, while the crossover body style provides more versatility for weekend adventures. Though the 382-litre boot is smaller than some alternatives (like the Octavia\'s 640 litres), it\'s still practical for a couple\'s weekend away or a small family holiday. The smart cruise control on higher trim models is particularly valuable for longer motorway stretches, reducing driver fatigue significantly.',
-            'The '3' trim offers the best balance of equipment and value, with leather seats and the improved infotainment system. Worth noting is that models with remaining warranty from this era would still be covered until at least 2025, giving peace of mind for used buyers. The conventional crossover styling also means it doesn\'t scream "hybrid" like the more futuristic Ioniq, which many buyers prefer.'
+            'The "3" trim offers the best balance of equipment and value, with leather seats and the improved infotainment system. Worth noting is that models with remaining warranty from this era would still be covered until at least 2025, giving peace of mind for used buyers. The conventional crossover styling also means it doesn\'t scream "hybrid" like the more futuristic Ioniq, which many buyers prefer.'
         ],
         garethRating: 4,
         practicality: {
