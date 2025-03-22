@@ -145,69 +145,75 @@ export const carData = {
     },
     'hyundai-ioniq': {
         title: 'Hyundai Ioniq',
-        subtitle: 'Hybrid Hatchback (Pre-Facelift)',
+        subtitle: 'Hybrid Hatchback',
         yearRange: '2016 - 2020 (1st Generation)',
-        priceRange: '£12,000 - £18,000 used',
+        priceRange: '£9,500 - £11,000 used',
         image: 'images/Hyundai-Ioniq-Hybrid.jpg',
         ncapRating: 5,
         trimLevels: [
             {
-                name: 'SE',
+                name: 'SE (Base Trim)',
                 features: [
-                    '16-inch alloy wheels',
-                    'Air conditioning',
-                    '7-inch touchscreen',
-                    'Bluetooth connectivity',
-                    'Lane departure warning'
+                    '15-inch alloy wheels',
+                    '5-inch touchscreen infotainment system',
+                    'DAB radio',
+                    'Dual-zone climate control',
+                    'Rear parking sensors',
+                    'Lane keeping assist'
                 ]
             },
             {
-                name: 'Premium SE',
+                name: 'Premium (Mid Trim)',
                 features: [
-                    '17-inch alloy wheels',
-                    'Climate control',
+                    '7-inch touchscreen with satellite navigation',
+                    'Apple CarPlay and Android Auto',
                     'Heated front seats',
-                    'Smart cruise control',
-                    'All SE features'
+                    'Heated steering wheel',
+                    'Wireless phone charging pad',
+                    'Front parking sensors'
                 ]
             },
             {
-                name: 'Premium',
+                name: 'Premium SE (Top Trim)',
                 features: [
-                    'LED headlights',
-                    'Wireless phone charging',
-                    '8-inch touchscreen',
-                    'Parking sensors',
-                    'All Premium SE features'
+                    'Leather seat upholstery',
+                    'Ventilated front seats',
+                    'Electric driver\'s seat adjustment',
+                    'Blind spot detection',
+                    'Rear cross-traffic alert',
+                    'Adaptive cruise control'
                 ]
             }
         ],
         positivePoints: [
-            'Excellent fuel economy (up to 58.5 mpg combined)',
-            'Spacious interior with good headroom',
-            'Comprehensive standard safety features',
-            'Smooth hybrid powertrain',
-            'Good value for money'
+            'Excellent fuel economy (55-60 mpg)',
+            'Lower maintenance costs',
+            'Hyundai\'s reliability record',
+            'Good boot space (443 litres)',
+            '£0 road tax (VED)',
+            'Consistent efficiency regardless of journey type'
         ],
         negativePoints: [
-            'Limited boot space due to battery placement',
-            'Basic interior materials',
-            'Limited electric-only range',
-            'Less refined DCT transmission',
-            'Smaller touchscreen than facelift model'
+            'Less powerful (139 bhp combined)',
+            'DCT transmission can be jerky at low speeds',
+            'Less premium-feeling interior',
+            'Not as engaging to drive',
+            'Very limited electric-only range (1-2 miles)'
         ],
         reliabilityRating: 8.5,
         garethComments: [
-            'The pre-facelift Ioniq Hybrid is a solid choice for those looking for a reliable and efficient hybrid car. While it may not have the most exciting design or the most premium feel, it delivers where it matters most - fuel efficiency and reliability.',
-            'The hybrid system is smooth and well-integrated, making it a pleasure to drive in both city and motorway conditions. The interior, while not luxurious, is well-built and practical.',
-            'One of the main drawbacks is the boot space, which is compromised by the battery placement. However, this is a common trade-off in hybrid vehicles, and the Ioniq handles it better than many competitors.'
+            'The Hyundai Ioniq Hybrid represents excellent value for money, especially for those looking for efficient everyday transportation. While it may not excite driving enthusiasts, its practical nature and low running costs make it a sensible choice for families. The DCT gearbox can take some getting used to, but the overall package is very compelling.',
+            'For a driving pattern focused on weekend use, holidays and primarily motorway/A-road journeys, the Ioniq is remarkably well-suited. Unlike plug-in hybrids that lose efficiency once their batteries deplete, the standard Ioniq hybrid maintains consistent 55-60 mpg economy on longer motorway runs without requiring any charging infrastructure. This makes it particularly efficient for occasional use with longer trips. The adaptive cruise control on Premium SE models is excellent for motorway journeys, while the generous boot space can accommodate holiday luggage with ease. The comfortable seats and refined cabin make it a pleasant place to spend time on longer journeys, though road noise can become noticeable at higher speeds.'
         ],
-        garethRating: 4.5,
+        garethRating: 4,
         practicality: {
             bootSpace: '443 Litres',
             rearLegroom: 'Good',
-            fuelTank: '45 Litres',
-            seating: '5 seats'
+            seatsFolded: '1,505 Litres',
+            isofixPoints: '2 Rear',
+            fuelEconomy: '55-60 mpg',
+            motorwayEfficiency: '52-57 mpg',
+            length: '4,470 mm'
         }
     },
     'kia-niro': {
