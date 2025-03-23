@@ -438,7 +438,7 @@ export const carData = {
         title: 'BMW Active Tourer 216d',
         subtitle: 'Diesel MPV',
         yearRange: '2014 - 2018 (F45 Generation)',
-        priceRange: '£8,000 - £12,000 used',
+        priceRange: '£7,000 - £15,000 used',
         image: 'images/BMW-Active-Tourer-216d.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -507,7 +507,7 @@ export const carData = {
         title: 'Citroen C5 Aircross',
         subtitle: 'Hybrid SUV',
         yearRange: '2020 - Present',
-        priceRange: '£15,000 - £25,000 used',
+        priceRange: '£12,000 - £25,000 used',
         image: 'images/Citroen-C5-Aircross.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -576,7 +576,7 @@ export const carData = {
         title: 'Skoda Octavia',
         subtitle: 'Estate (2017)',
         yearRange: '2017 - 2020 (3rd Generation)',
-        priceRange: '£8,000 - £12,000 used',
+        priceRange: '£8,000 - £15,000 used',
         image: 'images/Skoda-Octavia-2017.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -645,7 +645,7 @@ export const carData = {
         title: 'Skoda Octavia',
         subtitle: 'Estate (2020)',
         yearRange: '2020 - Present (4th Generation)',
-        priceRange: '£15,000 - £25,000 used',
+        priceRange: '£14,000 - £25,000 used',
         image: 'images/Skoda-Octavia-2020.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -714,7 +714,7 @@ export const carData = {
         title: 'Skoda Octavia',
         subtitle: 'MHEV Estate',
         yearRange: '2020 - Present (4th Generation)',
-        priceRange: '£15,000 - £25,000 used',
+        priceRange: '£10,500 - £13,000 used',
         image: 'images/Skoda-Octavia-MHEV.jpg',
         ncapRating: 5,
         trimLevels: [
