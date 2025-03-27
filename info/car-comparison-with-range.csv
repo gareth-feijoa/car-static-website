@@ -1,0 +1,14 @@
+Manufacturer,Model,Variant,Year Range,Engine Type,Engine Size (L),Power (bhp),Motorway MPG,CO2 Emissions (g/km),NOx Emissions (mg/km),Boot Space (L),Market Price (£),Price Range (£),Reliability Score (/10),Overall Score (/100),Rank,Head to head
+Hyundai,Ioniq,Hybrid Facelift,2020 - 2022,Petrol Hybrid,1.6,139,54-59 mpg,95-105 g/km,10-20 mg/km,443,11000,"£10,990 - £15,995",8.7,74.7,1,Good value for money
+Hyundai,Ioniq,Hybrid,2016 - 2020,Petrol Hybrid,1.6,139,52-57 mpg,100-110 g/km,10-25 mg/km,443,9700,"£8,995 - £11,995",8.5,73.2,2,Great economy
+Skoda,Octavia,3rd Gen 2.0 TDI,2017 - 2020,Diesel,2.0,150,50-60 mpg,138-150 g/km,110-160 mg/km,610,11500,"£10,400 - £12,700",8.8,67.5,3,Enormous space
+Skoda,Octavia,e-TEC,2020 - Present,Mild Hybrid Petrol,1.0,110,50-55 mpg,138-150 g/km,30-60 mg/km,640,12000,"£10,800 - £13,200",8.3,65.4,4,Latest technology
+Skoda,Octavia,4th Gen 2.0 TDI,2020 - Present,Diesel,2.0,150,55-65 mpg,127-142 g/km,90-140 mg/km,640,15000,"£13,500 - £16,500",8.5,65.3,5,Best motorway runner
+Kia,Niro,Hybrid,2016 - 2022,Petrol Hybrid,1.6,139,48-53 mpg,100-110 g/km,10-25 mg/km,382,12000,"£9,650 - £14,990",8.6,54.8,6,Crossover styling
+BMW,2 Series Active Tourer,216d,2015 - 2019,Diesel,1.5,116,48-52 mpg,149-155 g/km,120-170 mg/km,468,9000,"£8,100 - £9,900",7.6,46.2,7,Premium interior
+BMW,2 Series Active Tourer,218d,2015 - 2019,Diesel,2.0,150,50-55 mpg,155-162 g/km,130-180 mg/km,468,10500,"£9,500 - £11,600",7.6,43.4,8,Best BMW diesel
+BMW,2 Series Active Tourer,225xe,2016 - 2018,Plug-in Hybrid,1.5,224,38-43 mpg,130-145 g/km,50-80 mg/km,400,13000,"£11,700 - £14,300",7.2,37.8,9,Electric AWD capability
+BMW,2 Series Active Tourer,220d,2015 - 2019,Diesel,2.0,190,47-52 mpg,165-174 g/km,140-180 mg/km,468,11500,"£10,400 - £12,700",7.5,32.6,10,Most powerful
+Citroen,C5 Aircross,BlueHDI 130,2018 - Present,Diesel,1.5,130,48-52 mpg,127-135 g/km,90-140 mg/km,580,13500,"£12,200 - £14,900",7.8,52.4,11,Comfort suspension
+Citroen,C5 Aircross,BlueHDI 180,2018 - Present,Diesel,2.0,180,45-48 mpg,135-145 g/km,100-150 mg/km,580,14500,"£13,100 - £16,000",7.7,47.2,12,More powerful
+Mitsubishi,Outlander,PHEV,2015 - 2021,Plug-in Hybrid,2.4,224,35-40 mpg,140-160 g/km,40-70 mg/km,463,11000,"£9,900 - £12,100",7.6,34.5,13,4WD capability

@@ -54,6 +54,11 @@ const router = new Router([
     }
 ]);
 
+// Function to show comparison page
+function showComparisonPage() {
+    window.location.href = 'ioniq-niro-comparison.html';
+}
+
 // Initialize car selector
 function initializeCarSelector() {
     const select = document.getElementById('car-selector');
@@ -82,12 +87,35 @@ function initializeCarSelector() {
         select.appendChild(option);
     });
 
-    // Handle car selection
+    // Add event listener for car selection
     select.addEventListener('change', (e) => {
-        const carId = e.target.value;
-        router.navigate(`/${carId}`);
+        const selectedCar = e.target.value;
+        if (selectedCar) {
+            router.navigate(`/${selectedCar}`);
+        }
     });
+
+    // Set initial selection based on current page
+    const currentPage = window.location.pathname.split('/').pop();
+    if (currentPage && currentPage !== '') {
+        select.value = currentPage;
+    }
 }
+
+// Initialize comparison button
+function initializeComparisonButton() {
+    const button = document.getElementById('comparison-button');
+    if (button) {
+        button.addEventListener('click', showComparisonPage);
+    }
+}
+
+// Initialize everything when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    initializeCarSelector();
+    initializeComparisonButton();
+    router.handleRoute();
+});
 
 // Show car details
 function showCarDetails(carId) {
@@ -200,9 +228,4 @@ function showCarDetails(carId) {
             </div>
         `).join('');
     }
-}
-
-// Initialize the app
-document.addEventListener('DOMContentLoaded', () => {
-    initializeCarSelector();
-}); 
+} 

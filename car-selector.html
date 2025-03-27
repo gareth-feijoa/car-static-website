@@ -1,17 +1,18 @@
 <!-- Car Selection Dropdown -->
 <div class="car-selector">
-    <select id="carSelect" class="car-dropdown">
-        <option value="">Select a Car</option>
-        <option value="bmw-225xe.html">BMW 225xe</option>
-        <option value="citroen-c5-aircross.html">Citroën C5 Aircross</option>
-        <option value="hyundai-ioniq.html">Hyundai IONIQ</option>
-        <option value="hyundai-ioniq-facelift.html">Hyundai IONIQ (Facelift)</option>
-        <option value="kia-niro.html">Kia Niro</option>
-        <option value="mitsubishi-outlander.html">Mitsubishi Outlander</option>
-        <option value="skoda-octavia.html">Škoda Octavia</option>
-        <option value="skoda-octavia-3rd-gen.html">Škoda Octavia (3rd Gen)</option>
-        <option value="skoda-octavia-4th-gen.html">Škoda Octavia (4th Gen)</option>
-        <option value="vw-passat-gte.html">VW Passat GTE</option>
+    <select id="car-selector">
+        <option value="">Select a car...</option>
+        <option value="bmw-225xe">BMW 225xe</option>
+        <option value="hyundai-ioniq-facelift">Hyundai Ioniq Hybrid (2020-2022)</option>
+        <option value="hyundai-ioniq">Hyundai Ioniq Hybrid (2016-2020)</option>
+        <option value="kia-niro">Kia Niro</option>
+        <option value="mitsubishi-outlander">Mitsubishi Outlander</option>
+        <option value="vw-passat-gte">Volkswagen Passat GTE</option>
+        <option value="bmw-active-tourer-216d">BMW Active Tourer 216d</option>
+        <option value="citroen-c5-aircross">Citroen C5 Aircross</option>
+        <option value="skoda-octavia-2017">Skoda Octavia Estate (2017-2020)</option>
+        <option value="skoda-octavia-2020">Skoda Octavia Estate (2020-Present)</option>
+        <option value="skoda-octavia-mhev">Skoda Octavia Estate MHEV (2020-Present)</option>
     </select>
 </div>
 
@@ -23,7 +24,7 @@
         transform: translateY(-50%);
     }
 
-    .car-dropdown {
+    #car-selector {
         padding: 0.5rem 2rem 0.5rem 1rem;
         font-size: 1rem;
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -39,17 +40,17 @@
         transition: border-color 0.3s ease;
     }
 
-    .car-dropdown:hover {
+    #car-selector:hover {
         border-color: rgba(255, 255, 255, 0.5);
     }
 
-    .car-dropdown:focus {
+    #car-selector:focus {
         outline: none;
         border-color: rgba(255, 255, 255, 0.8);
         box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
     }
 
-    .car-dropdown option {
+    #car-selector option {
         background-color: white;
         color: var(--text-color);
     }
@@ -60,9 +61,10 @@
             transform: none;
             margin-top: 1rem;
             text-align: center;
+            align-items: center;
         }
 
-        .car-dropdown {
+        #car-selector {
             width: 90%;
             max-width: 300px;
         }
@@ -71,17 +73,16 @@
 
 <script>
     // Car Selection Handler
-    const carSelect = document.getElementById('carSelect');
+    const carSelect = document.getElementById('car-selector');
 
-    function handleCarSelection(value) {
-        if (value) {
-            window.location.href = value;
+    carSelect.addEventListener('change', (e) => {
+        const selectedValue = e.target.value;
+        if (selectedValue) {
+            window.location.href = `/${selectedValue}`;
         }
-    }
+    });
 
-    carSelect.addEventListener('change', (e) => handleCarSelection(e.target.value));
-
-    // Set the current page as selected
+    // Set current page as selected when window loads
     window.addEventListener('load', () => {
         const currentPage = window.location.pathname.split('/').pop();
         if (carSelect) {

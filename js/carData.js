@@ -3,7 +3,7 @@ export const carData = {
         title: 'BMW 225xe',
         subtitle: 'Active Tourer Plug-in Hybrid',
         yearRange: '2016 - 2018 (F45 Generation)',
-        priceRange: '£9,500 - £12,000 used',
+        priceRange: '£11,700 - £14,300 used',
         image: 'images/BMW-225XE.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -73,7 +73,7 @@ export const carData = {
         title: 'Hyundai Ioniq',
         subtitle: 'Hybrid Hatchback (Facelift)',
         yearRange: '2020 - 2022 (Facelifted 1st Generation)',
-        priceRange: '£13,000 - £18,000 used',
+        priceRange: '£10,990 - £15,995 used',
         image: 'images/Hyundai-Ioniq-Hybrid-facelift.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -147,7 +147,7 @@ export const carData = {
         title: 'Hyundai Ioniq',
         subtitle: 'Hybrid Hatchback',
         yearRange: '2016 - 2020 (1st Generation)',
-        priceRange: '£9,500 - £11,000 used',
+        priceRange: '£8,995 - £11,995 used',
         image: 'images/Hyundai-Ioniq-Hybrid.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -220,7 +220,7 @@ export const carData = {
         title: 'Kia Niro',
         subtitle: 'Hybrid Crossover',
         yearRange: '2016 - 2022 (1st Generation)',
-        priceRange: '£9,500 - £15,000 used (2018 models)',
+        priceRange: '£9,650 - £14,990 used',
         image: 'images/Kia-Niro-Hybrid.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -304,8 +304,8 @@ export const carData = {
     'mitsubishi-outlander': {
         title: 'Mitsubishi Outlander',
         subtitle: 'PHEV SUV',
-        yearRange: '2015 - 2021 (2nd Generation PHEV)',
-        priceRange: '£9,000 - £15,000 used',
+        yearRange: '2015 - 2021 (3rd Generation)',
+        priceRange: '£9,900 - £12,100 used',
         image: 'images/Mitsubishi-Outlander.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -372,10 +372,10 @@ export const carData = {
         }
     },
     'vw-passat-gte': {
-        title: 'Volkswagen Passat GTE',
-        subtitle: 'Estate Plug-in Hybrid',
+        title: 'Volkswagen Passat',
+        subtitle: 'GTE Estate Plug-in Hybrid',
         yearRange: '2016 - 2020 (B8 Generation)',
-        priceRange: '£9,000 - £12,000 used',
+        priceRange: '£9,500 - £12,500 used',
         image: 'images/VW-Passat-GTE.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -435,10 +435,10 @@ export const carData = {
         }
     },
     'bmw-active-tourer-216d': {
-        title: 'BMW Active Tourer 216d',
-        subtitle: 'Diesel MPV',
-        yearRange: '2014 - 2018 (F45 Generation)',
-        priceRange: '£7,000 - £15,000 used',
+        title: 'BMW 2 Series Active Tourer',
+        subtitle: '216d Diesel',
+        yearRange: '2015 - 2019 (F45 Generation)',
+        priceRange: '£8,100 - £9,900 used',
         image: 'images/BMW-Active-Tourer-216d.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -504,10 +504,10 @@ export const carData = {
         }
     },
     'citroen-c5-aircross': {
-        title: 'Citroen C5 Aircross',
-        subtitle: 'Hybrid SUV',
-        yearRange: '2020 - Present',
-        priceRange: '£12,000 - £25,000 used',
+        title: 'Citroën C5 Aircross',
+        subtitle: 'BlueHDi Diesel SUV',
+        yearRange: '2018 - Present',
+        priceRange: '£12,200 - £14,900 used',
         image: 'images/Citroen-C5-Aircross.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -573,10 +573,10 @@ export const carData = {
         }
     },
     'skoda-octavia-2017': {
-        title: 'Skoda Octavia',
-        subtitle: 'Estate (2017)',
+        title: 'Škoda Octavia',
+        subtitle: 'Estate 2.0 TDI',
         yearRange: '2017 - 2020 (3rd Generation)',
-        priceRange: '£8,000 - £15,000 used',
+        priceRange: '£10,400 - £12,700 used',
         image: 'images/Skoda-Octavia-2017.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -642,10 +642,10 @@ export const carData = {
         }
     },
     'skoda-octavia-2020': {
-        title: 'Skoda Octavia',
-        subtitle: 'Estate (2020)',
+        title: 'Škoda Octavia',
+        subtitle: 'Estate 2.0 TDI',
         yearRange: '2020 - Present (4th Generation)',
-        priceRange: '£14,000 - £25,000 used',
+        priceRange: '£13,500 - £16,500 used',
         image: 'images/Skoda-Octavia-2020.jpg',
         ncapRating: 5,
         trimLevels: [
@@ -711,10 +711,10 @@ export const carData = {
         }
     },
     'skoda-octavia-mhev': {
-        title: 'Skoda Octavia',
-        subtitle: 'MHEV Estate',
+        title: 'Škoda Octavia',
+        subtitle: 'Estate e-TEC Mild Hybrid',
         yearRange: '2020 - Present (4th Generation)',
-        priceRange: '£10,500 - £13,000 used',
+        priceRange: '£10,800 - £13,200 used',
         image: 'images/Skoda-Octavia-MHEV.jpg',
         ncapRating: 5,
         trimLevels: [

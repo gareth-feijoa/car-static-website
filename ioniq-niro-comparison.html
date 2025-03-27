@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyundai Ioniq vs Kia Niro: Head-to-Head Comparison</title>
+    <style>
+        :root {
+            --ioniq-color: #00A0DF;
+            --niro-color: #BB162B;
+            --light-grey: #f1f3f4;
+            --border-color: #dadce0;
+            --dark-text: #202124;
+            --light-text: #5f6368;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--ioniq-color), var(--niro-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .car-images {
+            display: flex;
+            background-color: var(--light-grey);
+        }
+        
+        .car-image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .car-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        .car-name {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .ioniq {
+            color: var(--ioniq-color);
+        }
+        
+        .niro {
+            color: var(--niro-color);
+        }
+        
+        .comparison-section {
+            padding: 20px;
+        }
+        
+        h2 {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 25% 37.5% 37.5%;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .grid-header {
+            background-color: var(--light-grey);
+            font-weight: bold;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .grid-header.feature {
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .grid-header.ioniq {
+            color: var(--ioniq-color);
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .grid-header.niro {
+            color: var(--niro-color);
+        }
+        
+        .grid-row {
+            display: contents;
+        }
+        
+        .grid-cell {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .grid-cell.feature {
+            font-weight: 500;
+            border-right: 1px solid var(--border-color);
+            background-color: rgba(241, 243, 244, 0.5);
+        }
+        
+        .grid-cell.ioniq {
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .highlight {
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .ioniq-win {
+            color: var(--ioniq-color);
+        }
+        
+        .niro-win {
+            color: var(--niro-color);
+        }
+        
+        .score-section {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        
+        .score-card {
+            flex: 1;
+            max-width: 250px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ioniq-card {
+            border: 2px solid var(--ioniq-color);
+        }
+        
+        .niro-card {
+            border: 2px solid var(--niro-color);
+        }
+        
+        .score {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .ioniq-score {
+            color: var(--ioniq-color);
+        }
+        
+        .niro-score {
+            color: var(--niro-color);
+        }
+        
+        .score-label {
+            font-size: 14px;
+            color: var(--light-text);
+        }
+        
+        .rank {
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .ioniq-rank {
+            background-color: var(--ioniq-color);
+        }
+        
+        .niro-rank {
+            background-color: var(--niro-color);
+        }
+        
+        .verdict-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--light-grey);
+            border-radius: 8px;
+        }
+        
+        .verdict-title {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .radar-charts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .radar-chart {
+            max-width: 350px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .chart-title {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .comparison-note {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e8f4fd;
+            border-left: 4px solid var(--ioniq-color);
+            border-radius: 4px;
+        }
+        
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                border-radius: 4px;
+            }
+
+            header {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            .car-images {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .car-image {
+                padding: 10px;
+            }
+
+            .car-name {
+                font-size: 16px;
+            }
+
+            .comparison-section {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                font-size: 14px;
+            }
+
+            .grid-header {
+                display: none;
+            }
+
+            .grid-row {
+                display: flex;
+                flex-direction: column;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .grid-cell {
+                padding: 8px 10px;
+                border: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .grid-cell.feature {
+                background-color: var(--light-grey);
+                font-weight: bold;
+                border-bottom: 2px solid var(--border-color);
+            }
+
+            .grid-cell.ioniq::before {
+                content: "IONIQ: ";
+                color: var(--ioniq-color);
+                font-weight: bold;
+            }
+
+            .grid-cell.niro::before {
+                content: "NIRO: ";
+                color: var(--niro-color);
+                font-weight: bold;
+            }
+
+            .score-section {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .score-card {
+                max-width: 100%;
+            }
+
+            .score {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hyundai Ioniq vs Kia Niro</h1>
+            <div class="subtitle">Head-to-Head Comparison: Hybrid Family Cars</div>
+        </header>
+        
+        <div class="car-images">
+            <div class="car-image">
+                <img src="/api/placeholder/400/250" alt="Hyundai Ioniq Hybrid" />
+                <div class="car-name ioniq">Hyundai Ioniq Hybrid</div>
+            </div>
+            <div class="car-image">
+                <img src="/api/placeholder/400/250" alt="Kia Niro Hybrid" />
+                <div class="car-name niro">Kia Niro Hybrid</div>
+            </div>
+        </div>
+        
+        <div class="comparison-section">
+            <h2>Specifications Comparison</h2>
+            
+            <div class="comparison-grid">
+                <!-- Headers -->
+                <div class="grid-header feature">Feature</div>
+                <div class="grid-header ioniq">Hyundai Ioniq Hybrid</div>
+                <div class="grid-header niro">Kia Niro Hybrid</div>
+                
+                <!-- Year Range -->
+                <div class="grid-cell feature">Year Range</div>
+                <div class="grid-cell ioniq">2016 - 2020 (1st Gen)<br>2020 - 2022 (Facelift)</div>
+                <div class="grid-cell niro">2016 - 2022 (1st Gen)</div>
+                
+                <!-- Engine -->
+                <div class="grid-cell feature">Engine</div>
+                <div class="grid-cell ioniq">1.6L Petrol Hybrid</div>
+                <div class="grid-cell niro">1.6L Petrol Hybrid</div>
+                
+                <!-- Power -->
+                <div class="grid-cell feature">Power Output</div>
+                <div class="grid-cell ioniq">139 bhp (combined)</div>
+                <div class="grid-cell niro">139 bhp (combined)</div>
+                
+                <!-- Fuel Economy -->
+                <div class="grid-cell feature">Motorway Fuel Economy</div>
+                <div class="grid-cell ioniq"><span class="highlight ioniq-win">52-57 mpg</span><br>54-59 mpg (Facelift)</div>
+                <div class="grid-cell niro">48-53 mpg</div>
+                
+                <!-- Emissions -->
+                <div class="grid-cell feature">Real-World CO₂ Emissions</div>
+                <div class="grid-cell ioniq"><span class="highlight ioniq-win">100-110 g/km</span><br>95-105 g/km (Facelift)</div>
+                <div class="grid-cell niro">115-125 g/km</div>
+                
+                <!-- NOx Emissions -->
+                <div class="grid-cell feature">Real-World NOx Emissions</div>
+                <div class="grid-cell ioniq"><span class="highlight ioniq-win">10-25 mg/km</span><br>10-20 mg/km (Facelift)</div>
+                <div class="grid-cell niro">15-35 mg/km</div>
+                
+                <!-- Boot Space -->
+                <div class="grid-cell feature">Boot Space</div>
+                <div class="grid-cell ioniq">443 litres</div>
+                <div class="grid-cell niro"><span class="highlight niro-win">382 litres</span></div>
+                
+                <!-- Seats Folded -->
+                <div class="grid-cell feature">Seats Folded Capacity</div>
+                <div class="grid-cell ioniq"><span class="highlight ioniq-win">1,505 litres</span></div>
+                <div class="grid-cell niro">1,380 litres</div>
+                
+                <!-- Body Style -->
+                <div class="grid-cell feature">Body Style</div>
+                <div class="grid-cell ioniq">Hatchback (Liftback)</div>
+                <div class="grid-cell niro"><span class="highlight niro-win">Crossover SUV</span></div>
+                
+                <!-- Driving Position -->
+                <div class="grid-cell feature">Driving Position</div>
+                <div class="grid-cell ioniq">Standard hatchback height</div>
+                <div class="grid-cell niro"><span class="highlight niro-win">Higher crossover position</span></div>
+                
+                <!-- Typical Market Price -->
+                <div class="grid-cell feature">Typical Used Price (2018)</div>
+                <div class="grid-cell ioniq">£9,500 - £11,000</div>
+                <div class="grid-cell niro">£9,500 - £15,000</div>
+                
+                <!-- Reliability -->
+                <div class="grid-cell feature">Reliability Rating</div>
+                <div class="grid-cell ioniq"><span class="highlight ioniq-win">8.5/10</span><br>8.7/10 (Facelift)</div>
+                <div class="grid-cell niro">8.6/10</div>
+                
+                <!-- Warranty -->
+                <div class="grid-cell feature">Original Warranty</div>
+                <div class="grid-cell ioniq">5 years unlimited mileage</div>
+                <div class="grid-cell niro"><span class="highlight niro-win">7 years / 100,000 miles</span></div>
+                
+                <!-- Trim Levels -->
+                <div class="grid-cell feature">Trim Levels</div>
+                <div class="grid-cell ioniq">SE, Premium, Premium SE<br>SE Connect, Premium, Premium SE (Facelift)</div>
+                <div class="grid-cell niro">'1', '2', '3', '4'</div>
+            </div>
+            
+            <div class="score-section">
+                <div class="score-card ioniq-card">
+                    <div class="car-name ioniq">Hyundai Ioniq Hybrid</div>
+                    <div class="score ioniq-score">73.2</div>
+                    <div class="score-label">Overall Score (out of 100)</div>
+                    <div class="rank ioniq-rank">Rank: #2 of 13</div>
+                </div>
+                
+                <div class="score-card niro-card">
+                    <div class="car-name niro">Kia Niro Hybrid</div>
+                    <div class="score niro-score">54.8</div>
+                    <div class="score-label">Overall Score (out of 100)</div>
+                    <div class="rank niro-rank">Rank: #6 of 13</div>
+                </div>
+            </div>
+            
+            <div class="comparison-note">
+                <p><strong>Note:</strong> The Hyundai Ioniq and Kia Niro share the same powertrain and hybrid technology, but the Ioniq is designed as an efficiency-focused hatchback while the Niro is styled as a crossover SUV with a higher driving position.</p>
+            </div>
+        </div>
+        
+        <div class="verdict-section">
+            <h3 class="verdict-title">Verdict for Weekend and Motorway Use</h3>
+            <p>For a driving pattern focused on weekend use, holidays and primarily motorway/A-road journeys:</p>
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li><strong>Hyundai Ioniq:</strong> Offers superior fuel economy and lower emissions, making it more efficient for longer motorway journeys. The larger boot space with seats folded provides good practicality for weekend trips, though it has a conventional low driving position.</li>
+                <li><strong>Kia Niro:</strong> Provides a higher crossover-style driving position that many drivers prefer, with slightly reduced fuel economy. The crossover styling offers more versatility for weekend adventures, though the boot is slightly smaller than the Ioniq's.</li>
+            </ul>
+            <p style="margin-top: 10px;">The Ioniq scores higher overall due to its superior efficiency and emissions performance, but the Niro might be preferred by those wanting a higher driving position and SUV styling, especially for occasional off-road parking during countryside weekend trips.</p>
+        </div>
+    </div>
+</body>
+</html>

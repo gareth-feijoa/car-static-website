@@ -1,0 +1,14 @@
+Manufacturer,Model,Variant,Year Range,Engine Type,Engine Size (L),Power (bhp),Motorway MPG,CO2 Emissions (g/km),NOx Emissions (mg/km),Boot Space (L),Market Price (£),Reliability Score (/10),Overall Score (/100),Rank,Head to head
+Hyundai,Ioniq,Hybrid Facelift,2020-2022,Petrol Hybrid,1.6,139,54-59,95-105,10-20,443,11000,8.7,74.7,1,Yes
+Hyundai,Ioniq,Hybrid,2016-2020,Petrol Hybrid,1.6,139,52-57,100-110,10-25,443,9700,8.5,73.2,2,Yes
+Skoda,Octavia,3rd Gen 2.0 TDI,2017-2020,Diesel,2.0,150,50-60,138-150,110-160,610,11500,8.8,67.5,3,Yes
+Skoda,Octavia,e-TEC,2020-Present,Mild Hybrid Petrol,1.0,110,50-55,138-150,30-60,640,12000,8.3,65.4,4,No
+Skoda,Octavia,4th Gen 2.0 TDI,2020-Present,Diesel,2.0,150,55-65,127-142,90-140,640,15000,8.5,65.3,5,No
+Kia,Niro,Hybrid,2016-2022,Petrol Hybrid,1.6,139,48-53,100-115,10-25,382,12000,8.6,57.3,6,Yes
+BMW,2 Series Active Tourer,216d,2015-2019,Diesel,1.5,116,48-52,149-155,120-170,468,9000,7.6,46.2,7,No
+BMW,2 Series Active Tourer,218d,2015-2019,Diesel,2.0,150,50-55,155-162,130-180,468,10500,7.6,43.4,8,Yes
+Citroen,C5 Aircross,BlueHDI,2018-Present,Diesel,1.5,130,48-52,140-155,100-150,580,14000,7.8,40.4,9,No
+VW,Passat,GTE Estate,2016-2020,Plug-in Hybrid,1.4,218,40-45,140-155,50-80,483,10500,7.8,38.6,10,No
+BMW,2 Series Active Tourer,220d,2015-2019,Diesel,2.0,190,47-52,165-174,140-180,468,11500,7.5,32.6,11,No
+Mitsubishi,Outlander,PHEV,2015-2021,Plug-in Hybrid,2.0,N/A,35-40,160-170,60-90,463,12000,7.6,24.2,12,No
+BMW,2 Series Active Tourer,225xe,2016-2018,Plug-in Hybrid,1.5,224,38-43,130-145,50-80,400,13000,7.2,17.8,13,No

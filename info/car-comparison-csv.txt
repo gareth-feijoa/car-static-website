@@ -1,0 +1,12 @@
+Model,Type,Years,Price Range,Boot Space (L),Seats Folded (L),Fuel Economy,Motorway Efficiency,Electric Range,Reliability,NCAP Rating,Gareth Rating,Total Power,Drive Type
+"BMW 225xe Active Tourer","Plug-in Hybrid MPV","2016 - 2018","£9,500 - £12,000","400","1350","40-45 mpg","38-43 mpg","25 miles (new)","7.2/10","5/5","4/5","224 bhp","All-wheel drive (electric rear)"
+"BMW 2 Series Active Tourer","Combustion MPV","2015 - 2019","£7,000 - £15,000","468","1510","55-65 mpg (218d)","50-55 mpg (218d)","N/A","7.6/10","5/5","4/5","136-231 bhp (petrol), 116-190 bhp (diesel)","Front-wheel drive"
+"Hyundai Ioniq Hybrid","Hybrid Hatchback","2016 - 2020","£9,500 - £11,000","443","1505","55-60 mpg","52-57 mpg","1-2 miles","8.5/10","5/5","4/5","139 bhp","Front-wheel drive"
+"Hyundai Ioniq Hybrid (Facelift)","Hybrid Hatchback","2020 - 2022","£13,000 - £18,000","443","1505","58-63 mpg","54-59 mpg","1-2 miles","8.7/10","5/5","4.2/5","139 bhp","Front-wheel drive"
+"Mitsubishi Outlander PHEV","Plug-in Hybrid SUV","2015 - 2021","£9,000 - £15,000","463","1602","35-40 mpg","35-40 mpg","28 miles (new)","7.6/10","5/5","3/5","N/A","All-wheel drive"
+"VW Passat GTE Estate","Plug-in Hybrid Estate","2016 - 2020","£9,000 - £12,000","483","1613","40-45 mpg","40-45 mpg","31 miles (new)","7.8/10","5/5","4/5","218 bhp","Front-wheel drive"
+"Skoda Octavia e-TEC MHEV","Mild Hybrid Estate","2020 - Present","£10,500 - £13,000","640","1700","50-55 mpg","50-55 mpg","N/A","8.3/10","5/5","4/5","110 bhp","Front-wheel drive"
+"Skoda Octavia (3rd Gen Facelift)","Combustion Estate/Hatchback","2017 - 2020","£8,000 - £15,000","590/610","1740","55-60 mpg (2.0 TDI)","50-60 mpg (diesel)","N/A","8.8/10","5/5","5/5","115-245 bhp","Front-wheel drive"
+"Skoda Octavia (4th Gen)","Combustion Estate/Hatchback","2020 - Present","£14,000 - £25,000","600/640","1700","60-65 mpg (2.0 TDI)","55-65 mpg (diesel)","N/A","8.5/10","5/5","5/5","110-245 bhp","Front-wheel drive"
+"Kia Niro","Hybrid Crossover","2016 - 2022","£9,500 - £15,000","382","1380","50-60 mpg","48-53 mpg","1-2 miles","8.6/10","5/5","4/5","139 bhp","Front-wheel drive"
+"Citroen C5 Aircross BlueHDI","Diesel SUV","2018 - Present","£12,000 - £25,000","580","1630","50-60 mpg (1.5)","48-52 mpg (1.5), 45-48 mpg (2.0)","N/A","7.8/10","4/5","4/5","130 bhp (1.5), 180 bhp (2.0)","Front-wheel drive"
